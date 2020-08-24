@@ -1,0 +1,32 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" class="th-sm">No.</th>
+        <th scope="col" class="th-sm">Nombres</th>
+        <th scope="col" class="th-sm">Apellidos</th>
+        <th scope="col" class="th-sm">Identificación</th>
+        <th scope="col" class="th-sm">Número de tarjeta</th>
+        <th scope="col" class="th-sm">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuarios of usuariosLista | paginate: config, let indice = index">
+        <td class="center">{{ ((config.currentPage-1)*config.itemsPerPage)+indice+1 }}</td>
+        <td>{{ usuarios.nombres }}</td>
+        <td>{{ usuarios.apellidos }}</td>
+        <td>{{ usuarios.identificacion }}</td>
+        <td>{{ usuarios.numeroTarjeta }}</td>
+        <td>
+          <button class="btn btn-info text-withe" (click)="onEdit(usuarios)">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="paginator">
+    <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+  <app-editar></app-editar>
+
+ 
+
+

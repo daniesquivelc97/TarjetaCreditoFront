@@ -1,0 +1,34 @@
+table {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+}
+
+ 
+.paginator {
+    padding: 0% 1% 1% 1%;
+    align-content: center;
+    justify-content: center;
+}
+ 
+::ng-deep .pagination-next ::after {
+    display: none !important;
+}
+ 
+::ng-deep .pagination-next.disabled::after {
+    display: none !important;
+}
+ 
+::ng-deep .pagination-previous ::before {
+    display: none !important;
+}
+ 
+::ng-deep .pagination-previous.disabled::before {
+    display: none !important;
+}
+ 
+::ng-deep li.current {
+    background-color:black !important;
+}
+

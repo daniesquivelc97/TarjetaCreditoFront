@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="title">Registrar usuario</h3>
+            <div class="formulary">
+                <form [formGroup]="formSave">
+ 
+                    <div class="form-group">
+                        <div class="frame" style="padding-top: 5%;">
+                            <mat-form-field class="example-full-width">
+                                <input matInput formControlName="nombres" placeholder="Nombres" required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <div class="frame">
+                            <mat-form-field class="example-full-width">
+                                <input matInput formControlName="apellidos" placeholder="Apellidos" required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="frame">
+                            <mat-form-field class="example-full-width">
+                                <input matInput formControlName="identificacion" placeholder="Identificación" required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="frame">
+                            <mat-form-field class="example-full-width">
+                                <input matInput formControlName="numeroTarjeta" placeholder="Numero de tarjeta" required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <div class="frame">
+                            <button mat-raised-button style="background-color: #1DBF8E; color: white;" (click)="guardarRegistro()">Guardar
+                                <em class="fas fa-paper-plane"></em>
+                            </button>
+                            <button mat-raised-button style="background-color: #FF2B4E; color: white;" (click)="onReset()">Limpiar
+                                <em class="fas fa-sync-alt"></em>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

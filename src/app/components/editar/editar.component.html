@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="title">Editar usuario</h3>
+        <div class="formulary">
+            <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+                <div class="form-group">
+                    <div class="frame" style="padding-top: 5%;">
+                        <mat-form-field class="example-full-width">
+                            <input matInput type="text" class="form-control" name="nombres" #nombres="ngModel" [(ngModel)]="tarjetaService.selectedUser.nombres" placeholder="Nombres">
+                        </mat-form-field>    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="frame">
+                        <mat-form-field class="example-full-width">
+                            <input matInput type="text" class="form-control" name="apellidos" #apellidos="ngModel" [(ngModel)]="tarjetaService.selectedUser.apellidos" placeholder="Apellidos">
+                        </mat-form-field> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="frame">
+                        <mat-form-field class="example-full-width">
+                            <input matInput type="text" class="form-control" name="identificacion" #identificacion="ngModel" [(ngModel)]="tarjetaService.selectedUser.identificacion" placeholder="Identificación">
+                        </mat-form-field>    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="frame">
+                        <mat-form-field class="example-full-width">
+                            <input matInput type="text" class="form-control" name="numeroTarjeta" #numeroTarjeta="ngModel" [(ngModel)]="tarjetaService.selectedUser.numeroTarjeta" placeholder="Numero de tarjeta">
+                        </mat-form-field>    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-plus-circle"></i>Actualizar
+                    </button>
+                    <button class="btn btn-info" type="reset" >
+                        <i class="fas fa-sync-alt"></i>Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
